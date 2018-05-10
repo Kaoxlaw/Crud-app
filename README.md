@@ -1,6 +1,9 @@
-# Crud-app
+# authentification-app
 
-This application use NodeJs and MongoDb. 
+This app is a Sing-up/-in with Token and Crud.
+This app use NodeJs and MongoDb. 
+
+# Install
 
 Please install Node JS here: https://nodejs.org/en/download/ 
 and MongoDB here: https://docs.mongodb.com/manual/administration/install-community/
@@ -16,6 +19,7 @@ I use postman for my http request, you can find it here: https://www.getpostman.
 
 and I use Robo3t as Graphical User Interface of my mongoDB, you can find here: https://robomongo.org/
 
+# Methods
 
 So with this API, you can: 
 Create a User: /auth/signup, 
@@ -27,6 +31,8 @@ Signin with the User: /auth/signin,
 And get a Token.
 
 Thanks for passing by!
+
+# Autor
 
 Mickael LY.
 
