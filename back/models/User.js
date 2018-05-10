@@ -10,6 +10,21 @@ let UserSchema = new mongoose.Schema({
     type: String,
     required: true
   },
+  firstname: {
+    type: String, 
+  },
+  lastname: {
+    type: String, 
+  },
+  adress: {
+    type: String, 
+  },
+  age: {
+    type: number, 
+  },
+  job: {
+    type: String, 
+  },
   date: {
     type: Date,
     default: Date.now
