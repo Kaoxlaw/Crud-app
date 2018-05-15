@@ -27,7 +27,8 @@ auth.post("/signup", (req, res) => {
           } else {
             res.status(200).json({
               success: true,
-              message: `Hi and Welcome, your profile is now created!`
+              message: `Hi and Welcome, your profile is now created!`,
+              content: user
             });
           }
         });
@@ -103,13 +104,19 @@ auth.post("/signin", (req, res) => {
 });
 
 auth.put("/edit/:id", (req, res) => {
+
+  let _mySetObj = {};
+
+  if (req.body.username) _mySetObj['username'] = req.body.username;
+  if (bcrypt.hashSync(req.body.password, 10)) _mySetObj['hash_password'] = bcrypt.hashSync(req.body.password, 10)
+  if (req.body.lastname) _mySetObj['lastname'] = req.body.lastname;
+  if (req.body.adress) _mySetObj['adress'] = req.body.adress;
+  if (req.body.age) _mySetObj['age'] = req.body.age;
+
   User.findByIdAndUpdate({
     _id: req.params.id
   }, {
-    $set: {
-      username: req.body.username,
-      hash_password: bcrypt.hashSync(req.body.password, 10)
-    }
+    $set: _mySetObj
   }, {
     upsert: true
   }, (err, user) => {
@@ -128,6 +135,7 @@ auth.put("/edit/:id", (req, res) => {
 });
 
 auth.delete("/delete/:id", (req, res) => {
+
   User.findOneAndRemove({
     _id: req.params.id
   }, (err, user) => {

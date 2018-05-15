@@ -20,7 +20,7 @@ let UserSchema = new mongoose.Schema({
     type: String, 
   },
   age: {
-    type: number, 
+    type: Number, 
   },
   job: {
     type: String, 

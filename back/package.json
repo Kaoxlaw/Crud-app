@@ -10,15 +10,15 @@
   "author": "Mickael LY",
   "license": "ISC",
   "dependencies": {
-    "bcrypt": "^2.0.0",
-    "body-parser": "^1.18.2",
+    "bcrypt": "^2.0.1",
+    "body-parser": "^1.18.3",
     "express": "^4.16.3",
     "jsonwebtoken": "^8.2.1",
-    "mongoose": "^5.0.15"
+    "mongoose": "^5.1.1"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
-    "babel-preset-env": "^1.6.1",
+    "babel-preset-env": "^1.7.0",
     "babel-register": "^6.26.0"
   }
 }
